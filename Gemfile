@@ -49,7 +49,6 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
-    gem 'rspec-rails'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
 end
@@ -71,3 +70,25 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+gem 'rubocop', '>= 1.0', '< 2.0'
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'database_cleaner-active_record'
+end
+
+group :test do
+  gem 'shoulda-matchers'
+end
+
+group :development, :test do
+  gem 'factory_bot_rails'
+end
+
+gem 'ffi', '~> 1.15', '>= 1.15.5'
+
+gem 'rails-controller-testing', '~> 1.0', '>= 1.0.5'

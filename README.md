@@ -21,6 +21,12 @@ A blog app will be a classic example of a blog website. a fully functional websi
 
 <br>
 
+> Create database `rails db:create`
+
+<br>
+
+> Migrate database `rails db:migrate`
+
 > To run the app `rails s`
 
 <br>

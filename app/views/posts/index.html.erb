@@ -1,2 +1,31 @@
-<h1>Homepage displaying all the users post</h1>
-<p>...under construction</p>
+<section>
+  <div class="cardflex">
+    <div class="user-image border">
+      <img src=<%= @user.photo %> alt="User Image" width="100%" height="100%">
+    </div>
+    <div class="user-data border">
+      <h1><%= @user.name %></h1>
+      <p class="number-posts">Number of posts: <%= @user.posts_counter %></p>
+    </div>
+</div>
+</section>
+<section>
+  <ul>
+    <% @posts.each do |post| %>
+        <%= link_to user_post_path(user_id: post.author_id, id: post.id) do %>
+          <li class="card-block">
+          <%= render partial: "shared/post", locals: {post: post} %>
+          </li>
+        <% end %>
+        <div class="comment-container">
+        <h4>Comments:</h4>
+        <ul>
+            <% post.recent_comments.each do |comment| %>
+              <p><%= comment.author.name %>: <%= comment.text %></p>
+            <% end %>
+        </ul>
+    </div>
+    <% end %>
+  </ul>
+
+</section>

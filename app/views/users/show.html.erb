@@ -1,1 +1,24 @@
-<h1>displaying single user information</h1>
+<section>
+  <%= render partial: "shared/user", locals: {user: @user} %>
+  <div class="user-bio">
+    <h4>Bio:</h4>
+    <p><%= @user.bio %></p>
+  </div>
+</section>
+<section>
+  <ul>
+    <% @user.recent_posts.each do |post| %>
+        <li class="card">
+          <h4><%= post.title%></h4>
+          <h4><%= post.text%></h4>
+          <div class="sub-items">
+            <span>Comments: <%= post.comments_counter || 0 %></span>
+            <span>Likes: <%= post.likes_counter || 0 %> </span>
+          </div>
+        </li>
+    <% end %>
+  </ul>
+<div class="btn">
+  <%= link_to "See all posts" %>
+</div>
+</section>

@@ -14,51 +14,51 @@
  *= require_self
  */
 
- * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
- }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
- .cardflex {
-    display: flex;
-    text-decoration: none;
-    list-style-type: none;
- }
+.cardflex {
+  display: flex;
+  text-decoration: none;
+  list-style-type: none;
+}
 
- .border {
-    border: 2px solid gray;
- }
+.border {
+  border: 2px solid gray;
+}
 
- .user-data {
-    margin: 10px;
-    padding: 10px;
-    max-width: 50%;
- }
+.user-data {
+  margin: 10px;
+  padding: 10px;
+  max-width: 50%;
+}
 
- .number-posts {
-    text-align: right;
- }
+.number-posts {
+  text-align: right;
+}
 
- .user-image,
- .btn,
- .comment-container {
-    margin: 10px;
- }
+.user-image,
+.btn,
+.comment-container {
+  margin: 10px;
+}
 
- .sub-items {
-    margin-top: 10px;
- }
+.sub-items {
+  margin-top: 10px;
+}
 
- .user-bio {
-    margin: 10px;
-    padding: 10px;
-    border: 2px solid #808080;
- }
+.user-bio {
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid #808080;
+}
 
- .card {
-    list-style-type: none;
-    border: 2px solid gray;
-    margin: 10px;
-    padding: 10px;
- }
+.card {
+  list-style-type: none;
+  border: 2px solid gray;
+  margin: 10px;
+  padding: 10px;
+}

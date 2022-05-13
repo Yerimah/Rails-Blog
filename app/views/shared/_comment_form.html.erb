@@ -1,0 +1,10 @@
+<h2 class="comment-container">Comments</h2>
+<%= form_with model: @comment, url: "/users/#{@posts.author_id}/posts/#{@posts.id}/comments", scope: :comment do |form| %>
+        
+  <div class="field">
+    <%= form.text_area :text, cols: 60, rows: 5, placeholder: 'Leave a comment' %>
+  </div>
+
+    <%= form.submit "Submit", class: "btn" %>
+
+<% end%>

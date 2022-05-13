@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(
       text: params['comment']['text'],
-      author_id: params[:user_id],
+      author_id: current_user.id,
       post_id: params[:post_id]
     )
 

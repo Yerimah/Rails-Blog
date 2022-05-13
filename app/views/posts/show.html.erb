@@ -1,3 +1,36 @@
 <section>
+<div class="">
+    <%= notice%>
+</div>
+<div class="">
+    <%= alert%>
+</div>
  <%= render partial: "shared/post", locals: {post: @posts} %>
+ 
+ <div>
+   <div class="btn">
+   <%= form_with model: @like, url: "/users/#{@posts.author_id}/posts/#{@posts.id}/likes", scope: :like do |form| %>
+     <%= form.submit "Like" %>
+     <% end %>
+   </div>
+
+   <div class="field">
+   <% @posts.recent_comments.each do |comment| %>
+    <p><%= comment.author.name %>: <%= comment.text %></p>
+  <% end %>
+  </div>
+    
+   <div>
+   <h2 class="comment-container">Comments</h2>
+    <%= form_with model: @comment, url: "/users/#{@posts.author_id}/posts/#{@posts.id}/comments", scope: :comment do |form| %>
+        
+    <div class="field">
+      <%= form.text_area :text, cols: 60, rows: 5, placeholder: 'Leave a comment' %>
+    </div>
+
+      <%= form.submit "Submit", class: "btn" %>
+
+    <% end%>
+   </div>
+ </div>
 </section>

@@ -42,7 +42,8 @@
 
 .user-image,
 .btn,
-.comment-container {
+.comment-container,
+.field {
   margin: 10px;
 }
 

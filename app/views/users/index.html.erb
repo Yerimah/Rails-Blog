@@ -1,7 +1,11 @@
+<section>
 <h1 class="page-title" >Welcome to bloggers hub</h1>
 
 <ul class="user-list">
 <% @all_users.each do |user|%>
+    <%= link_to user, id: user.id do %>
     <%= render partial: "shared/user", locals: {user: user} %>
+    <% end %>
 <% end %>
 </ul>
+</section>

@@ -12,9 +12,11 @@ class CommentsController < ApplicationController
 
     if @comment.save
       @comment.update_comments_counter
-      redirect_to user_posts_path(params[:user_id]), notice: 'You have successfully created a comment'
+      redirect_to user_posts_path(params[:user_id])
+      flash[:notice] = 'You have successfully created a comment'
     else
-      redirect_to user_posts_path(params[:user_id]), notice: 'Error! comment could not be created'
+      redirect_to user_posts_path(params[:user_id])
+      flash[:notice] = 'Error! comment could not be created'
     end
   end
 end

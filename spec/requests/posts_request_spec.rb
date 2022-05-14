@@ -13,10 +13,6 @@ RSpec.describe 'All Posts', type: :request do
     it 'checks if correct template was rendered' do
       expect(response).to render_template('index')
     end
-
-    it 'checks if response includes placeholder' do
-      expect(response.body).to include('Homepage displaying all the users post')
-    end
   end
 end
 
@@ -32,10 +28,6 @@ RSpec.describe 'Singe Post', type: :request do
 
     it 'checks if correct template was rendered' do
       expect(response).to render_template('show')
-    end
-
-    it 'checks if response includes placholder' do
-      expect(response.body).to include('Display single post information')
     end
   end
 end

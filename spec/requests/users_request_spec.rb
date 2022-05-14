@@ -13,10 +13,6 @@ RSpec.describe 'All Users', type: :request do
     it 'checks if a correct template was rendered' do
       expect(response).to render_template('index')
     end
-
-    it 'checks if response body includes placeholder' do
-      expect(response.body).to include('Homepage displaying all blog users')
-    end
   end
 end
 
@@ -32,10 +28,6 @@ RSpec.describe 'Single Users', type: :request do
 
     it 'checks if a correct template was rendered' do
       expect(response).to render_template('show')
-    end
-
-    it 'checks if response body includes placeholder' do
-      expect(response.body).to include('displaying single user information')
     end
   end
 end

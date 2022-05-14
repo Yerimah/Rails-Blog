@@ -45,5 +45,7 @@ RSpec.describe Post, type: :model do
       @post.comments_counter = 15
       expect(@post).to be_valid
     end
+
+    
   end
 end

@@ -46,6 +46,9 @@ RSpec.describe Post, type: :model do
       expect(@post).to be_valid
     end
 
-    
+    let!(:recent_comments) { @post.comments.order('created_at Desc').limit(5) }
+    it 'should return the recent posts' do
+      expect(@post.recent_comments).to match(recent_comments)
+    end
   end
 end

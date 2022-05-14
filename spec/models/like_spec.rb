@@ -23,12 +23,12 @@ RSpec.describe Like, type: :model do
     end
 
     it 'likes counter should be an integer' do
-        @post.likes_counter = 'likes_counter'
-        expect(@like).to_not be_valid
-      end
-      it 'likes counter should be greater than or equal to zero' do
-        @post.likes_counter = -1
-        expect(@like).to_not be_valid
-      end
+      @post.likes_counter = 'likes_counter'
+      expect(@like).to_not be_valid
+    end
+    it 'likes counter should be greater than or equal to zero' do
+      @post.likes_counter = -1
+      expect(@like).to_not be_valid
+    end
   end
 end

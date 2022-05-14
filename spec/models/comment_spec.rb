@@ -24,7 +24,7 @@ RSpec.describe Comment, type: :model do
     end
 
     it 'if comment counter is updated' do
-        expect(@post.comments_counter).to_not eq 4
+      expect(@post.comments_counter).to_not eq 4
     end
   end
 end

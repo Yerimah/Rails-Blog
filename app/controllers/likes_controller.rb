@@ -7,7 +7,8 @@ class LikesController < ApplicationController
 
     if @like.save
       @like.update_likes_counter
-      redirect_to user_posts_path, notice: 'You liked this post!'
+      redirect_to user_posts_path
+      flash[:notice] = 'You liked this post!'
     else
       redirect_to user_posts_path, alert: 'Error occured. Could not like this post'
     end
